@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS PEMROGRAMAN WEB - SISTEM SETORAN</title>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-slate-50">
+    <div id="app">
+        <router-view></router-view>
+    </div>
+
+    <script src="src/services/api.js"></script>
+    <script src="src/pages/login-view.js"></script>
+    <script src="src/pages/dashboard-view.js"></script>
+    <script src="src/pages/detail-view.js"></script>
+    <script src="src/router/router.js"></script>
+    
+    <script>
+        // Jalankan Vue setelah semua script terload
+        window.onload = () => {
+            const { createApp } = Vue;
+            if (typeof router !== 'undefined') {
+                const app = createApp({});
+                app.use(router);
+                app.mount('#app');
+                console.log("Aplikasi Berhasil Dimuat!");
+            }
+        };
+    </script>
+</body>
+</html>
