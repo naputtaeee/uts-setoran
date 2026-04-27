@@ -4,7 +4,7 @@ const LoginView = {
         <div class="w-full max-w-md bg-white border border-white shadow-2xl rounded-[3rem] p-10">
             <div class="text-center mb-8">
                 <div class="bg-emerald-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg text-white font-bold text-2xl font-mono">H</div>
-                <h1 class="text-2xl font-bold">Assalamu'alaikum</h1>
+                <h1 class="text-2xl font-bold">Selamat Siang/h1>
                 <p class="text-slate-400 text-sm">Dashboard DPA Pak Fikry</p>
             </div>
             <form @submit.prevent="handleLogin" class="space-y-4">
